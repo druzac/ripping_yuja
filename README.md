@@ -42,6 +42,17 @@ example of calling the script:
 python yuja_rip.py --cookies "JSESSIONID=<JSESSIONID_VALUE>; AWSALBCORS=<AWSALBCORS_VALUE>" --class_pid 18105 --out_dir out/videos --pattern 'Video 18' video_list.json
 ```
 
+# notes on video formats
+
+this script is (probably?) going to download videos in mpegts
+format. as far as i can tell this is a useless format for
+non-browsers. it's used to support HLS (HTTP live streaming), i.e.
+video players built into browsers that don't download the whole video
+at once.
+
+you probably want to use video transcoding software to transcode the
+downloaded video files into mp4 or similar. ffmpeg is free.
+
 # future work
 
 it'd be great to turn this into a tool anybody with a login could use,
